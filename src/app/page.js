@@ -6,7 +6,7 @@ export default function Home() {
               <Navigation/>
               <ProductSection/>
               <NewArrivalSection/>
-              <AccessoriesSection/>
+              {/*<AccessoriesSection/>*/}
           </main>
   );
 }

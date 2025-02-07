@@ -20,7 +20,7 @@ const AccessoriesSection = () => {
                     alt={alt}
                     img={img}
                     isVisible={isVisible}
-                    delay={i * 200} // Delay progresiv pentru fiecare card (200ms diferență)
+                    delay={i * 200}
                 />
             ))}
         </section>

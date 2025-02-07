@@ -56,22 +56,42 @@ const NewArrivalSection = () => {
                 hover: '/assetsnewarrival/v10.webp'
             },
             link: '/'
-        }
+        },
+        // {
+        //     id: 6,
+        //     title: '[Pre-order] Command 65',
+        //     price: '99.00',
+        //     images: {
+        //         default: '/assetsnewarrival/v7.webp',
+        //         hover: '/assetsnewarrival/v8.webp'
+        //     },
+        //     link: '/'
+        // },
+        // {
+        //     id: 7,
+        //     title: '[Pre-order] GT-80 Case',
+        //     price: '119.00',
+        //     images: {
+        //         default: '/assetsnewarrival/v9.webp',
+        //         hover: '/assetsnewarrival/v10.webp'
+        //     },
+        //     link: '/'
+        // }
     ];
 
     return (
-        <section className='z-10 relative flex justify-center flex-col items-center mt-16 mx-18'>
+        <section className='z-10 relative flex justify-center flex-col items-center mt-8 md:mt-16 mx-5 md:mx-18'>
             <h2 className='text-[42px]'>New arrival</h2>
             <a className='text-sm underline text-gray-600' href="/">Shop Now</a>
-            <button className='cursor-pointer hover:opacity-100 transition duration-200 absolute left-3 rotate-180 top-55 flex justify-center items-center w-[36px] h-[36px] rounded-full opacity-50 bg-white z-50'>
+            <button className='hidden cursor-pointer hover:opacity-100 transition duration-200 absolute left-3 rotate-180 top-55 md:flex justify-center items-center w-[36px] h-[36px] rounded-full opacity-50 bg-white z-50'>
                 <Icons.arrowSlider/>
             </button>
-            <button className='absolute right-3 cursor-pointer hover:opacity-100 transition duration-200 top-55 flex justify-center items-center w-[36px] h-[36px] rounded-full bg-white opacity-50 z-50'>
+            <button className='hidden absolute right-3 cursor-pointer hover:opacity-100 transition duration-200 top-55 md:flex justify-center items-center w-[36px] h-[36px] rounded-full bg-white opacity-50 z-50'>
                 <Icons.arrowSlider/>
             </button>
             <div
                 ref={targetRef}
-                className="flex items-center justify-evenly w-full gap-4 mt-8 flex-col md:flex-row"
+                className="flex items-center justify-evenly w-full gap-4 mt-8 flex-row overflow-x-scroll md:flex-row"
             >
                 {newArrivalItems.map(({ id, title, price, images, link }, index) => (
                     <NewArrivalCard

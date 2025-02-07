@@ -79,7 +79,7 @@ const Navigation = () => {
                 <SocialEnjoy
                     link='/'
                     description='Click it to join the KBDfans discord channel' />
-                <div className='flex justify-between py-[15px] px-[60px]'>
+                <div className='flex justify-between items-center py-[15px] px-[60px]'>
                     <a href="/">
                         <Image
                             width='185'

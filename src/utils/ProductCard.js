@@ -7,7 +7,7 @@ const ProductCard = ({ title, img, alt, link }) => {
                         width='700'
                         height='0'
                         priority
-                        className='h-full md:h-[350px] w-[700px]'
+                        className='h-[340px] rounded-md object-cover md:h-[350px] w-[700px]'
                         alt={alt}
                         src={img}
                     />
