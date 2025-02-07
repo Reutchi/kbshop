@@ -7,7 +7,7 @@ const ProductSection = () => {
         {id:4,title:'KBDfans x MM Gaming',img:'/multicolor_keyboard.webp',alt:'Multi Color Keyboard KBDfans x MM Gaming',link:'/'},
     ]
     return (
-        <section className='mt-10 mx-16'>
+        <section className='mt-10 mx-4 md:mx-16'>
             <div className='grid md:grid-cols-2 gap-4'>
                 {ProductCardItems.map(({id,title,img,alt,link}) => (
                     <ProductCard key={id} title={title} img={img} alt={alt} link={link}/>

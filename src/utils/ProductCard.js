@@ -13,7 +13,7 @@ const ProductCard = ({ title, img, alt, link }) => {
                     />
                 </figure>
                 <div className='absolute bottom-8 flex justify-center flex-col'>
-                    <h3 className='text-4xl text-white'>{title}</h3>
+                    <h3 className='text-2xl md:text-4xl text-white'>{title}</h3>
                     <a href={link} className='text-center text-white underline'>Buy now</a>
                 </div>
             </article>
