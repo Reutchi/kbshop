@@ -7,7 +7,7 @@ const AccessoriesCard = ({img,alt,title,link,isVisible,delay}) => {
             style={{ transitionDelay: `${delay}ms` }}
         >
             <figure className='transition-transform duration-300  group-hover:scale-105'>
-                <img className='object-cover w-[800px] h-[360px]' src={img} alt={alt}/>
+                <img className='object-cover  w-[800px] h-[360px]' src={img} alt={alt}/>
             </figure>
             <div className='border-black rounded-xl bg-[rgba(255,255,255,0.2)] flex justify-center items-center flex-col w-10/12 h-10/12 text-center space-y-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 '>
                 <h4 className='text-4xl text-white'>{title}</h4>

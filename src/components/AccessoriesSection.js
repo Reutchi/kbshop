@@ -11,7 +11,7 @@ const AccessoriesSection = () => {
     ]
 
     return (
-        <section ref={targetRef} className="flex md:flex-row flex-col justify-center mx-16 mt-24 gap-8">
+        <section ref={targetRef} className="flex md:flex-row flex-col justify-center mx-6 md:mx-16 mt-24 gap-8">
             {accessoriesCardItems.map(({ id, title, link, alt, img }, i) => (
                 <AccessoriesCard
                     key={id}
