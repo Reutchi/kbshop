@@ -1,6 +1,6 @@
-import NewArrivalCard from "@/utils/NewArrivalCard";
-import useIsVisible from "@/hooks/useIsVisible";
-import Icons from "@/utils/icons";
+import NewArrivalCard from "../utils/NewArrivalCard";
+import useIsVisible from "../hooks/useIsVisible";
+import Icons from "../utils/icons";
 
 const SectionReutilisable = ({ arr, sectionTitle,hrefShopNow }) => {
 
