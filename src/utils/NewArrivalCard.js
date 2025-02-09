@@ -1,5 +1,5 @@
 
-const NewArrivalCard = ({ img, alt, title, price, isVisible, delay }) => {
+const NewArrivalCard = ({ img, alt, title, price, isVisible, delay,sectionTitle }) => {
     return (
         <article
             className={`flex flex-col justify-center items-center rounded-md relative w-[950px] md:w-[250px] transition-all duration-700 ease-out
@@ -20,7 +20,7 @@ const NewArrivalCard = ({ img, alt, title, price, isVisible, delay }) => {
             </div>
 
             <p className="text-center text-xs pt-2 hover:text-gray-600 transition duration-300 cursor-pointer">{title}</p>
-            <span className="pt-1 text-gray-600 hover:text-black transition duration-300 cursor-default">{price}</span>
+            <span className="pt-1 text-gray-600 hover:text-black transition duration-300 cursor-default">{sectionTitle === 'PBTfans' && 'From'} ${price}</span>
         </article>
     );
 };

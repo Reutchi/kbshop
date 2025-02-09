@@ -1,10 +1,7 @@
 'use client'
-import NewArrivalCard from "@/utils/NewArrivalCard";
-import useIsVisible from "@/hooks/useIsVisible";
-import Icons from "@/utils/icons";
+import SectionReutilisable from "@/utils/SectionReutilisable";
 
 const NewArrivalSection = () => {
-    const [targetRef, isVisible] = useIsVisible(0.2);
 
     const newArrivalItems = [
         {
@@ -80,31 +77,8 @@ const NewArrivalSection = () => {
     ];
 
     return (
-        <section className='z-10 relative flex justify-center flex-col items-center mt-8 md:mt-16 mx-5 md:mx-18'>
-            <h2 className='text-[42px]'>New arrival</h2>
-            <a className='text-sm underline text-gray-600' href="/">Shop Now</a>
-            <button className='hidden cursor-pointer hover:opacity-100 transition duration-200 absolute left-3 rotate-180 top-55 md:flex justify-center items-center w-[36px] h-[36px] rounded-full opacity-50 bg-white z-50'>
-                <Icons.arrowSlider/>
-            </button>
-            <button className='hidden absolute right-3 cursor-pointer hover:opacity-100 transition duration-200 top-55 md:flex justify-center items-center w-[36px] h-[36px] rounded-full bg-white opacity-50 z-50'>
-                <Icons.arrowSlider/>
-            </button>
-            <div
-                ref={targetRef}
-                className="flex items-center justify-evenly w-full gap-4 mt-8 flex-row overflow-x-scroll md:flex-row"
-            >
-                {newArrivalItems.map(({ id, title, price, images, link }, index) => (
-                    <NewArrivalCard
-                        key={id}
-                        title={title}
-                        price={price}
-                        img={images}
-                        link={link}
-                        isVisible={isVisible}
-                        delay={index * 150}
-                    />
-                ))}
-            </div>
+        <section>
+            <SectionReutilisable arr={newArrivalItems} hrefShopNow='/' sectionTitle='New arrival'/>
         </section>
     );
 };
