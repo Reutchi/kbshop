@@ -1,4 +1,4 @@
-import { AccessoriesSection, Navigation, NewArrivalSection, PBtfansSection, ProductSection } from "@/components";
+import { AccessoriesSection, Navigation, NewArrivalSection, PBtfansSection, ProductSection } from "../components";
 
 export default function Home() {
     return (
