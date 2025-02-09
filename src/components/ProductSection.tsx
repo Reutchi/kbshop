@@ -1,5 +1,5 @@
 'use client'
-import ProductCard from "@/utils/ProductCard";
+import ProductCard from "../utils/ProductCard";
 import {useState} from "react";
 const ProductSection = () => {
     const [touchStart, setTouchStart] = useState(null)

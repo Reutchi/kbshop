@@ -1,6 +1,6 @@
 'use client'
-import AccessoriesCard from "@/utils/AccessoriesCard";
-import useIsVisible from "@/hooks/useIsVisible";
+import AccessoriesCard from "../utils/AccessoriesCard";
+import useIsVisible from "../hooks/useIsVisible";
 
 const AccessoriesSection = () => {
     const [targetRef, isVisible] = useIsVisible(0.2);

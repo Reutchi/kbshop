@@ -1,12 +1,15 @@
-import {AccessoriesSection, Navigation, NewArrivalSection, ProductSection} from "@/components";
+import { AccessoriesSection, Navigation, NewArrivalSection, PBtfansSection, ProductSection } from "@/components";
 
 export default function Home() {
-  return (
-          <main>
-              <Navigation/>
-              <ProductSection/>
-              <NewArrivalSection/>
-              <AccessoriesSection/>
-          </main>
-  );
+    return (
+        <>
+            <Navigation />
+            <main>
+                <ProductSection />
+                <NewArrivalSection />
+                <AccessoriesSection />
+                <PBtfansSection />
+            </main>
+        </>
+    );
 }

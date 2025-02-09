@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react';
-import { SocialEnjoy } from "@/components/index";
+import { SocialEnjoy } from "../components/index";
 import Icons from '../utils/icons'
 const Navigation = () => {
     const [activeDropdown, setActiveDropdown] = useState(null);
