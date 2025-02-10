@@ -1,5 +1,17 @@
-
-const NewArrivalCard = ({ img, alt, title, price, isVisible, delay,sectionTitle }) => {
+import React from 'react'
+interface NewArrivalCardProps{
+    img:{
+        hover:string,
+        default:string
+    },
+    alt:string,
+    title:string,
+    price:string,
+    isVisible:boolean,
+    delay:number,
+    sectionTitle:string,
+}
+const NewArrivalCard: React.FC<NewArrivalCardProps> = ({ img, alt, title, price, isVisible, delay,sectionTitle }) => {
     return (
         <article
             className={`flex flex-col justify-center items-center rounded-md relative w-[950px] md:w-[250px] transition-all duration-700 ease-out
