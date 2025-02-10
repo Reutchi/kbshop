@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react';
-import { SocialEnjoy } from "../components/index";
+import SocialEnjoy from '../components/SocialEnjoy'
 import Icons from '../utils/icons'
 import {DropdownContent, NavHeaderItems, NavItemsCategory} from "../types/navigation.types";
 const Navigation: React.FC = () => {
