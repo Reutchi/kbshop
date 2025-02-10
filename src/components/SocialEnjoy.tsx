@@ -1,5 +1,10 @@
+import React from 'react'
 
-const SocialEnjoy = ({description,link}) => {
+interface socialEnjoyProps{
+    description:string,
+    link:string,
+}
+const SocialEnjoy: React.FC = ({description,link}:socialEnjoyProps) => {
     return (
         <div className="flex items-center justify-center">
             <div
