@@ -1,27 +1,31 @@
 'use client'
 import ProductCard from "../utils/ProductCard";
-import {useState} from "react";
-const ProductSection = () => {
-    const [touchStart, setTouchStart] = useState(null)
-    const [touchEnd, setTouchEnd] = useState(null)
-    const [activeCarouselId, setActiveCarouselId] = useState(0)
+import React, {useState} from "react";
+import {productCardType} from "../types/product.types";
 
-    const productCardItems = [
+const ProductSection: React.FC = () => {
+    const [touchStart, setTouchStart] = useState<number | null >(null)
+    const [touchEnd, setTouchEnd] = useState<number | null>(null)
+    const [activeCarouselId, setActiveCarouselId] = useState<number>(0)
+
+
+    console.log(touchEnd)
+    const productCardItems :productCardType[]= [
         {id:1,title:'[GB] Snake60 R2',img:'/keyboard_image.jpg',alt:'keyboard image Snake60 R2 [GB]',link:'/'},
         {id:2,title:'[Pre-order] GT-80',img:'/black_keyboard.webp',alt:'Black keyboard GT-80 compatible with Wooting80 HE',link:'/'},
         {id:3,title:'Agar',img:'/agar.webp',alt:'Keyboard agar white',link:'/'},
         {id:4,title:'KBDfans x MM Gaming',img:'/multicolor_keyboard.webp',alt:'Multi Color Keyboard KBDfans x MM Gaming',link:'/'},
     ]
-    const handleCarousel = (id) => setActiveCarouselId(id)
+    const handleCarousel = (id:number) => setActiveCarouselId(id)
 
     const minSwipeDistance = 50
 
-    const onTouchStart = (e) => {
-        setTouchEnd(null) // otherwise the swipe is fired even with usual touch events
+    const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+        setTouchEnd(null)
         setTouchStart(e.targetTouches[0].clientX)
     }
 
-    const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+    const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => setTouchEnd(e.targetTouches[0].clientX)
 
     const onTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
@@ -30,15 +34,13 @@ const ProductSection = () => {
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
 
-        const maxCarouselId = productCardItems.length - 1; // Ultimul index valid
-        const firstIdCarousel = 0; // Primul index valid
+        const maxCarouselId = productCardItems.length - 1;
+        const firstIdCarousel = 0;
 
         if (isLeftSwipe || isRightSwipe) {
             if (isLeftSwipe) {
-                // Dacă suntem la ultima imagine, revenim la prima, altfel mergem înainte
                 setActiveCarouselId(activeCarouselId === maxCarouselId ? firstIdCarousel : activeCarouselId + 1);
             } else if (isRightSwipe) {
-                // Dacă suntem la prima imagine, revenim la ultima, altfel mergem înapoi
                 setActiveCarouselId(activeCarouselId === firstIdCarousel ? maxCarouselId : activeCarouselId - 1);
             }
         }
@@ -66,6 +68,8 @@ const ProductSection = () => {
                 <ul className='flex justify-center items-start gap-3 mt-4'>
                     {productCardItems.map((_, idx) => (
                         <li
+                            role='button'
+                            aria-label={`Select product ${idx + 1}`}
                             key={idx}
                             onClick={(ev) => handleCarousel(idx)}
                             className={`${activeCarouselId === idx ? 'border-2 border-gray-500 w-2.5 h-2.5' : 'bg-gray-400'} cursor-pointer w-2 h-2 rounded-full transition duration-500`}

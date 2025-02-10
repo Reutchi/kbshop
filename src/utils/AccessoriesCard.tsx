@@ -1,5 +1,14 @@
+import React from "react";
 
-const AccessoriesCard = ({img,alt,title,link,isVisible,delay}) => {
+interface AccessoriesCardProps{
+    img:string,
+    alt:string,
+    title:string,
+    link:string,
+    isVisible:boolean,
+    delay:number,
+}
+const AccessoriesCard: React.FC<AccessoriesCardProps> = ({img,alt,title,link,isVisible,delay}) => {
     return (
         <article
             className={`transition-all duration-700 ease-out cursor-pointer group overflow-hidden relative rounded-xl

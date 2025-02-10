@@ -1,18 +1,19 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { SocialEnjoy } from "../components/index";
 import Icons from '../utils/icons'
-const Navigation = () => {
-    const [activeDropdown, setActiveDropdown] = useState(null);
+import {DropdownContent, NavHeaderItems, NavItemsCategory} from "../types/navigation.types";
+const Navigation: React.FC = () => {
+    const [activeDropdown, setActiveDropdown] = useState<number | null>(null)
 
-    const NavHeaderItems = [
+    const NavHeaderItems: NavHeaderItems[] = [
         { id: 1, icon: "/searchIcon.svg", alt: "search icon", link: "#" },
         { id: 2, icon: "/profileIcon.svg", alt: "profile icon", link: "#" },
         { id: 3, icon: "/shoppingbagIcon.svg", alt: "shopping bag icon", link: "#" },
     ];
 
-    const NavItemsCategory = [
+    const NavItemsCategory: NavItemsCategory[] = [
         { id: 1, title: 'Home', link: '/', active: true },
         { id: 2, title: 'Keyboard Category' , link: '/',  active: false, dropdown:true},
         { id: 3, title: 'Shop', link: '#', active: false ,dropdown:true},
@@ -24,7 +25,7 @@ const Navigation = () => {
         // { id: 9, title: 'More links', link: '/', active: false },
     ];
 
-    const dropdownContent = {
+    const DropdownContent: Record<number, DropdownContent[]> = {
         3: [
             { id: 1, title: 'New Arrival', link: '#' },
             { id: 2, title: 'Restock', link: '#' },
@@ -120,16 +121,16 @@ const Navigation = () => {
                                     </div>
                                 </a>
 
-                                {dropdownContent[id] && activeDropdown === id && (
+                                {DropdownContent[id] && activeDropdown === id && (
                                     <ul
                                         className="absolute z-10 border-b-8 border-gray-500 -left-4 top-8 mt-2 w-64 flex flex-col gap-2 bg-black p-4"
                                         onMouseEnter={() => setActiveDropdown(id)}
                                         onMouseLeave={() => setTimeout(() => setActiveDropdown(null), 200)}
                                     >
-                                        {dropdownContent[id].map((item) => (
-                                            <li key={item.id}>
-                                                <a href={item.link} className="block text-gray-500 hover:text-white transition duration-300">
-                                                    {item.title}
+                                        {DropdownContent[id].map(({id,link,title}) => (
+                                            <li key={id}>
+                                                <a href={link} className="block text-gray-500 hover:text-white transition duration-300">
+                                                    {title}
                                                 </a>
                                             </li>
                                         ))}

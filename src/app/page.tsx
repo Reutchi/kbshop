@@ -1,7 +1,9 @@
 import { AccessoriesSection, Navigation, NewArrivalSection, PBtfansSection, ProductSection } from "../components";
+import React from "react";
 
-export default function Home() {
-    return (
+
+const Home: React.FC = () => {
+        return (
         <>
             <Navigation />
             <main>
@@ -13,3 +15,5 @@ export default function Home() {
         </>
     );
 }
+
+export default Home

@@ -1,13 +1,14 @@
 'use client'
 import SectionReutilisable from "../utils/SectionReutilisable";
+import {mainCardProduct} from "../types/product.types";
 
 const NewArrivalSection = () => {
 
-    const newArrivalItems = [
+    const newArrivalItems: mainCardProduct[]= [
         {
             id: 1,
             title: '[GB] Snake60 R2',
-            price: '350.00',
+            price: 350.00,
             images: {
                 default: '/assetsnewarrival/v0.webp',
                 hover: '/assetsnewarrival/v1.webp'
@@ -17,7 +18,7 @@ const NewArrivalSection = () => {
         {
             id: 2,
             title: '[GB] Keycult No. 1/1800 Darling Edition',
-            price: '495.00',
+            price: 495.00,
             images: {
                 default: '/assetsnewarrival/v3.webp',
                 hover: '/assetsnewarrival/v4.webp'
@@ -27,7 +28,7 @@ const NewArrivalSection = () => {
         {
             id: 3,
             title: 'KBDFans x MM He Gaming Keyboard Kit',
-            price: '80.00',
+            price: 80.00,
             images: {
                 default: '/assetsnewarrival/v5.webp',
                 hover: '/assetsnewarrival/v6.webp'
@@ -37,7 +38,7 @@ const NewArrivalSection = () => {
         {
             id: 4,
             title: '[Pre-order] Command 65',
-            price: '99.00',
+            price: 99.00,
             images: {
                 default: '/assetsnewarrival/v7.webp',
                 hover: '/assetsnewarrival/v8.webp'
@@ -47,7 +48,7 @@ const NewArrivalSection = () => {
         {
             id: 5,
             title: '[Pre-order] GT-80 Case',
-            price: '119.00',
+            price: 119.00,
             images: {
                 default: '/assetsnewarrival/v9.webp',
                 hover: '/assetsnewarrival/v10.webp'

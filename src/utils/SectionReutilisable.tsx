@@ -1,8 +1,15 @@
 import NewArrivalCard from "../utils/NewArrivalCard";
 import useIsVisible from "../hooks/useIsVisible";
 import Icons from "../utils/icons";
+import React from "react";
+import {mainCardProduct} from "../types/product.types";
 
-const SectionReutilisable = ({ arr, sectionTitle,hrefShopNow }) => {
+interface sectionReutilisableProps{
+    sectionTitle: string,
+    hrefShopNow:string,
+    arr: mainCardProduct[],
+}
+const SectionReutilisable: React.FC<sectionReutilisableProps> = ({ arr, sectionTitle,hrefShopNow }) => {
 
     const [targetRef, isVisible] = useIsVisible(0.2);
     const sliderButtons =
