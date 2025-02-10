@@ -13,7 +13,8 @@ const NewArrivalSection = () => {
                 default: '/assetsnewarrival/v0.webp',
                 hover: '/assetsnewarrival/v1.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image [GB] Snake60 R2'
         },
         {
             id: 2,
@@ -23,7 +24,8 @@ const NewArrivalSection = () => {
                 default: '/assetsnewarrival/v3.webp',
                 hover: '/assetsnewarrival/v4.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'Image [GB] Keycult No. 1/1800 Darling Edition'
         },
         {
             id: 3,
@@ -33,7 +35,8 @@ const NewArrivalSection = () => {
                 default: '/assetsnewarrival/v5.webp',
                 hover: '/assetsnewarrival/v6.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'Keyboard KBDFans x MM He Gaming Keyboard Kit'
         },
         {
             id: 4,
@@ -43,7 +46,8 @@ const NewArrivalSection = () => {
                 default: '/assetsnewarrival/v7.webp',
                 hover: '/assetsnewarrival/v8.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'Keyboard [Pre-order] Command 65'
         },
         {
             id: 5,
@@ -53,7 +57,8 @@ const NewArrivalSection = () => {
                 default: '/assetsnewarrival/v9.webp',
                 hover: '/assetsnewarrival/v10.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'Keyboard [Pre-order] GT-80 Case'
         },
         // {
         //     id: 6,

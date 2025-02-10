@@ -14,7 +14,8 @@ const PBtfansSection: React.FC = () => {
                 default: '/pbtfans/fv1.webp',
                 hover: '/pbtfans/fv0.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image PBTfans Corporate Beige'
         },
         {
             id: 2,
@@ -24,7 +25,8 @@ const PBtfansSection: React.FC = () => {
                 default: '/pbtfans/fv3.webp',
                 hover: '/pbtfans/fv2.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image PBTfans Office Love'
         },
         {
             id: 3,
@@ -34,7 +36,9 @@ const PBtfansSection: React.FC = () => {
                 default: '/pbtfans/fv5.webp',
                 hover: '/pbtfans/fv4.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image PBTfans Overtime'
+
         },
         {
             id: 4,
@@ -44,7 +48,8 @@ const PBtfansSection: React.FC = () => {
                 default: '/pbtfans/fv7.webp',
                 hover: '/pbtfans/fv6.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image PBTfans Touching Grass'
         },
         {
             id: 5,
@@ -54,7 +59,8 @@ const PBtfansSection: React.FC = () => {
                 default: '/pbtfans/fv8.webp',
                 hover: '/pbtfans/fv7.webp'
             },
-            link: '/'
+            link: '/',
+            alt:'image PBTfans Window View'
         },
     ]
 

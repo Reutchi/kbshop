@@ -1,4 +1,3 @@
-import React from "react";
 
 export interface productCardType{
     id:number,
@@ -17,6 +16,7 @@ export interface mainCardProduct{
         hover:string
     }
     link:string,
+    alt:string,
 }
 
 export interface accessoriesCardProduct{

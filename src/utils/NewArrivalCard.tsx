@@ -6,12 +6,13 @@ interface NewArrivalCardProps{
     },
     alt:string,
     title:string,
-    price:string,
+    price:number,
     isVisible:boolean,
     delay:number,
     sectionTitle:string,
+    link:string
 }
-const NewArrivalCard: React.FC<NewArrivalCardProps> = ({ img, alt, title, price, isVisible, delay,sectionTitle }) => {
+const NewArrivalCard: React.FC<NewArrivalCardProps> = ({link = '', img, alt, title, price, isVisible, delay,sectionTitle }) => {
     return (
         <article
             className={`flex flex-col justify-center items-center rounded-md relative w-[950px] md:w-[250px] transition-all duration-700 ease-out

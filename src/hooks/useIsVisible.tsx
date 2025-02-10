@@ -1,12 +1,9 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
+'use client'
+import React, {useEffect, useRef, useState} from "react";
 
-// Define the return type for the useIsVisible hook
-type UseIsVisibleReturn = [React.RefObject<HTMLElement | null>, boolean];
-
-const useIsVisible = (threshold: number = 0.5, rootMargin: string = '0px'): UseIsVisibleReturn => {
+const useIsVisible = (threshold: number = 0.5, rootMargin: string = '0px'): [React.RefObject<HTMLDivElement>, boolean] => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const ref = useRef<HTMLElement | null>(null);
+    const ref = useRef<HTMLDivElement>(null!); // Non-null assertion
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -26,6 +23,6 @@ const useIsVisible = (threshold: number = 0.5, rootMargin: string = '0px'): UseI
     }, [threshold, rootMargin]);
 
     return [ref, isVisible];
-}
+};
 
 export default useIsVisible;
