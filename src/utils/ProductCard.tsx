@@ -1,5 +1,13 @@
+import React from 'react'
 import Image from 'next/image'
-const ProductCard = ({ title, img, alt, link }) => {
+
+interface ProductCardProps{
+    title:string,
+    img:string,
+    alt:string,
+    link:string
+}
+const ProductCard: React.FC<ProductCardProps> = ({ title, img, alt, link }) => {
     return (
             <article className='relative cursor-pointer flex justify-center items-end  rounded-xl group overflow-hidden'>
                 <figure className='transition-transform duration-300  group-hover:scale-105'>
