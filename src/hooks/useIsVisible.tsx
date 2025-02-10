@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Define the return type for the useIsVisible hook
-type UseIsVisibleReturn = [React.RefObject<HTMLElement>, boolean];
+type UseIsVisibleReturn = [React.RefObject<HTMLElement | null>, boolean];
 
 const useIsVisible = (threshold: number = 0.5, rootMargin: string = '0px'): UseIsVisibleReturn => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
