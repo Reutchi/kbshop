@@ -1,5 +1,5 @@
 import {
-    AccessoriesSection,
+    AccessoriesSection, FooterSection,
     KeyboardSwitchesSection,
     Navigation,
     NewArrivalSection,
@@ -20,6 +20,7 @@ const Home: React.FC = () => {
                 <PBtfansSection />
                 <KeyboardSwitchesSection/>
             </main>
+            <FooterSection/>
         </>
     );
 }
