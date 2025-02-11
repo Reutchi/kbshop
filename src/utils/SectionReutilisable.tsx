@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import NewArrivalCard from "../utils/NewArrivalCard";
 import useIsVisible from "../hooks/useIsVisible";
