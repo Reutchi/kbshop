@@ -67,6 +67,7 @@ const PBtfansSection: React.FC = () => {
     return (
         <section>
             <SectionReutilisable
+                hrefTitle='Shop now'
                 sectionTitle='PBTfans'
                 hrefShopNow='/'
                 arr={PBTfansCardItems}/>
