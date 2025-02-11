@@ -84,7 +84,7 @@ const NewArrivalSection = () => {
 
     return (
         <section>
-            <SectionReutilisable arr={newArrivalItems} hrefShopNow='/' sectionTitle='New arrival'/>
+            <SectionReutilisable hrefTitle='Shop now' arr={newArrivalItems} hrefShopNow='/' sectionTitle='New arrival'/>
         </section>
     );
 };
