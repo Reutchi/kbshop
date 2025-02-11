@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation';
 import { FooterSection, Navigation, ProductDetailsCard } from '../../../components';
 import React from 'react';
 
-type paramsProps = { params: string };
-const ProductPage: React.FC = async ({ params }: paramsProps) => {
+type paramsProps = { params: { id: string } };
+const ProductPage = async ({ params }: paramsProps) => {
     const { id } = await params;
 
     return (
