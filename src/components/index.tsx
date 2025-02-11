@@ -7,6 +7,7 @@ import SectionReutilisable from "../utils/SectionReutilisable";
 import PBtfansSection from "../components/PBtfansSection";
 import KeyboardSwitchesSection from "./KeyboardSwitchesSection";
 import ReadyToUseSection from "./ReadyToUseSection";
+import FooterSection from "./FooterSection";
 export {
     Navigation,
     SocialEnjoy,
@@ -17,4 +18,5 @@ export {
     PBtfansSection,
     KeyboardSwitchesSection,
     ReadyToUseSection,
+    FooterSection
 }
