@@ -6,6 +6,11 @@ interface ProductPageProps {
     params: { id: string };
 }
 
+export async function generateMetadata({ params }: ProductPageProps) {
+    // Poți adăuga metadate dacă ai nevoie
+    return { title: `Product ${params.id}` };
+}
+
 const ProductPage = ({ params }: ProductPageProps) => {
     if (!params.id) {
         return notFound();
