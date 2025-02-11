@@ -2,7 +2,11 @@ import { notFound } from 'next/navigation';
 import { FooterSection, Navigation, ProductDetailsCard } from '../../../components';
 import React from 'react';
 
-const ProductPage = ({ params }: { params: { id: string } }) => {
+interface ProductPageProps {
+    params: { id: string };
+}
+
+const ProductPage = ({ params }: ProductPageProps) => {
     if (!params.id) {
         return notFound();
     }
