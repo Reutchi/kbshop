@@ -41,20 +41,25 @@ const FooterSection: React.FC = () => {
     return (
         <footer className='mt-16 text-white bg-black'>
             <div className='mx-16'>
-                <form onSubmit={ev => handleSubmitForm(ev)} className='py-10 w-1/2 mx-auto flex flex-col justify-center items-center'>
+                <form onSubmit={ev => handleSubmitForm(ev)} className='py-10 md:w-1/2 mx-auto flex flex-col justify-center items-center'>
                     Subscribe
-                    <label className='w-full flex flex-col py-2 md:flex-row justify-between px-4 pt-6 border-b border-gray-100'>
+
+                    {isSubmitting ? <h5 className='text-center p-12 text-4xl'>
+                        Thank you for signing up!
+                    </h5> : <label className='w-full flex flex-col py-2 md:flex-row justify-between px-4 pt-6 md:border-b border-gray-100'>
                         <input
                             value={emailSubscription}
                             onChange={ev => handleEmailSubscription(ev.target.value)}
-                            className="text-center md:text-left focus:outline-none placeholder:text-sm p-2 md:w-[80%]"
+                            className="border rounded-md md:border-none mb-4 md:mb-0 text-center md:text-left md:focus:outline-none focus:outline-gray-900 placeholder:text-sm p-2 md:w-[80%]"
                             placeholder="Email address"
                             type="email"
                         />
-                        <button type='submit' className='cursor-pointer text-xs'>
+                        <button type='submit' className='border rounded-xs bg-white md:bg-transparent md:border-none md:text-white border-white text-black p-2 cursor-pointer text-xs'>
                             SIGN UP
                         </button>
                     </label>
+                    }
+
                 </form>
                 <hr className='border border-[#ffffff26]' />
                 <nav className='pt-10 md:pt-30 pb-10'>
