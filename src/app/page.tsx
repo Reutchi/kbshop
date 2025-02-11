@@ -1,5 +1,5 @@
 import {
-    AccessoriesSection,
+    AccessoriesSection, FooterSection,
     KeyboardSwitchesSection,
     Navigation,
     NewArrivalSection,
@@ -21,6 +21,7 @@ const Home: React.FC = () => {
                 <KeyboardSwitchesSection/>
                 <ReadyToUseSection/>
             </main>
+            <FooterSection/>
         </>
     );
 }
