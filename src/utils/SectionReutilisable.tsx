@@ -9,6 +9,7 @@ interface sectionReutilisableProps {
     sectionTitle: string;
     hrefShopNow: string;
     arr: mainCardProduct[];
+    hrefTitle: string,
 }
 
 const SectionReutilisable: React.FC<sectionReutilisableProps> = ({
