@@ -74,7 +74,7 @@ const KeyboardSwitchesSection: React.FC = () => {
     ]
     return (
         <section>
-            <SectionReutilisable sectionTitle='Keyboard switches' hrefShopNow='/' arr={keyboardSwitchesItems} />
+            <SectionReutilisable sectionTitle='Keyboard switches' hrefShopNow='/' arr={keyboardSwitchesItems}  hrefTitle='Shop Now'/>
         </section>
     )
 }
