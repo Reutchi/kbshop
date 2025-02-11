@@ -1,18 +1,27 @@
-import React from 'react'
-interface NewArrivalCardProps{
-    img:{
-        hover:string,
-        default:string
-    },
-    alt:string,
-    title:string,
-    price:number,
-    isVisible:boolean,
-    delay:number,
-    sectionTitle:string,
-    link:string
+import React from 'react';
+interface NewArrivalCardProps {
+    img: {
+        hover: string;
+        default: string;
+    };
+    alt: string;
+    title: string;
+    price: number;
+    isVisible: boolean;
+    delay: number;
+    sectionTitle: string;
+    link: string;
 }
-const NewArrivalCard: React.FC<NewArrivalCardProps> = ({link = '', img, alt, title, price, isVisible, delay,sectionTitle }) => {
+const NewArrivalCard: React.FC<NewArrivalCardProps> = ({
+    link = '',
+    img,
+    alt,
+    title,
+    price,
+    isVisible,
+    delay,
+    sectionTitle,
+}) => {
     return (
         <article
             className={`flex flex-col justify-center items-center rounded-md relative w-[950px] md:w-[250px] transition-all duration-700 ease-out
@@ -32,8 +41,12 @@ const NewArrivalCard: React.FC<NewArrivalCardProps> = ({link = '', img, alt, tit
                 />
             </div>
 
-            <p className="text-center text-xs pt-2 hover:text-gray-600 transition duration-300 cursor-pointer">{title}</p>
-            <span className="pt-1 text-gray-600 hover:text-black transition duration-300 cursor-default">{sectionTitle === 'PBTfans' && 'From'} ${price}</span>
+            <p className="text-center text-xs pt-2 hover:text-gray-600 transition duration-300 cursor-pointer">
+                {title}
+            </p>
+            <span className="pt-1 text-gray-600 hover:text-black transition duration-300 cursor-default">
+                {sectionTitle === 'PBTfans' && 'From'} ${price}
+            </span>
         </article>
     );
 };

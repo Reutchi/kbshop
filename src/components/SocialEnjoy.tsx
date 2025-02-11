@@ -15,6 +15,6 @@ const SocialEnjoy: React.FC<SocialEnjoyProps> = ({ description, link }) => {
             </div>
         </div>
     );
-}
+};
 
 export default SocialEnjoy;

@@ -1,20 +1,19 @@
-import React from 'react'
-import {SectionReutilisable} from "./index";
-import {mainCardProduct} from "../types/product.types";
+import React from 'react';
+import { SectionReutilisable } from './index';
+import { mainCardProduct } from '../types/product.types';
 
 const KeyboardSwitchesSection: React.FC = () => {
-
-    const keyboardSwitchesItems:mainCardProduct[] = [
+    const keyboardSwitchesItems: mainCardProduct[] = [
         {
             id: 1,
             title: '[IC] Naevies EC Switches',
-            price: 0.00,
+            price: 0.0,
             images: {
                 default: '/keyboardswitchess/2.webp',
-                hover: '/keyboardswitchess/1.webp'
+                hover: '/keyboardswitchess/1.webp',
             },
             link: '/',
-            alt:'image [IC] Naevies EC Switches'
+            alt: 'image [IC] Naevies EC Switches',
         },
         {
             id: 2,
@@ -22,43 +21,43 @@ const KeyboardSwitchesSection: React.FC = () => {
             price: 29.25,
             images: {
                 default: '/keyboardswitchess/4.webp',
-                hover: '/keyboardswitchess/3.webp'
+                hover: '/keyboardswitchess/3.webp',
             },
             link: '/',
-            alt:'Image Magnetic Switches x 65 KBDFans'
+            alt: 'Image Magnetic Switches x 65 KBDFans',
         },
         {
             id: 3,
             title: 'Skyline Magnetic Switches',
-            price: 4.50,
+            price: 4.5,
             images: {
                 default: '/keyboardswitchess/6.webp',
-                hover: '/keyboardswitchess/5.webp'
+                hover: '/keyboardswitchess/5.webp',
             },
             link: '/',
-            alt:'Skyline Magnetic Switches'
+            alt: 'Skyline Magnetic Switches',
         },
         {
             id: 4,
             title: 'Siliworks×Napworks Nap Linear Switches',
-            price: 2.50,
+            price: 2.5,
             images: {
                 default: '/keyboardswitchess/8.webp',
-                hover: '/keyboardswitchess/7.webp'
+                hover: '/keyboardswitchess/7.webp',
             },
             link: '/',
-            alt:'Siliworks×Napworks Nap Linear Switches'
+            alt: 'Siliworks×Napworks Nap Linear Switches',
         },
         {
             id: 5,
             title: 'Siliworks Type R tactile Switches',
-            price: 4.80,
+            price: 4.8,
             images: {
                 default: '/keyboardswitchess/10.webp',
-                hover: '/keyboardswitchess/9.webp'
+                hover: '/keyboardswitchess/9.webp',
             },
             link: '/',
-            alt:'Siliworks Type R tactile Switches'
+            alt: 'Siliworks Type R tactile Switches',
         },
         // {
         //     id: 6,
@@ -71,12 +70,16 @@ const KeyboardSwitchesSection: React.FC = () => {
         //     link: '/',
         //     alt:'BCKeys×HMX Gulf Linear Switches'
         // },
-    ]
+    ];
     return (
         <section>
-            <SectionReutilisable sectionTitle='Keyboard switches' hrefShopNow='/' arr={keyboardSwitchesItems}  hrefTitle='Shop Now'/>
+            <SectionReutilisable
+                sectionTitle="Keyboard switches"
+                hrefShopNow="/"
+                arr={keyboardSwitchesItems}
+                hrefTitle="Shop Now"
+            />
         </section>
-    )
-}
-export default KeyboardSwitchesSection
-
+    );
+};
+export default KeyboardSwitchesSection;

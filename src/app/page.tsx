@@ -1,16 +1,17 @@
 import {
-    AccessoriesSection, FooterSection,
+    AccessoriesSection,
+    FooterSection,
     KeyboardSwitchesSection,
     Navigation,
     NewArrivalSection,
     PBtfansSection,
-    ProductSection, ReadyToUseSection
-} from "../components";
-import React from "react";
-
+    ProductSection,
+    ReadyToUseSection,
+} from '../components';
+import React from 'react';
 
 const Home: React.FC = () => {
-        return (
+    return (
         <>
             <Navigation />
             <main>
@@ -18,12 +19,12 @@ const Home: React.FC = () => {
                 <NewArrivalSection />
                 <AccessoriesSection />
                 <PBtfansSection />
-                <KeyboardSwitchesSection/>
-                <ReadyToUseSection/>
+                <KeyboardSwitchesSection />
+                <ReadyToUseSection />
             </main>
-            <FooterSection/>
+            <FooterSection />
         </>
     );
-}
+};
 
-export default Home
+export default Home;

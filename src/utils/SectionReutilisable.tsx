@@ -1,23 +1,23 @@
-'use client'
-import React from "react";
-import NewArrivalCard from "../utils/NewArrivalCard";
-import useIsVisible from "../hooks/useIsVisible";
-import Icons from "../utils/icons";
-import { mainCardProduct } from "../types/product.types";
+'use client';
+import React from 'react';
+import NewArrivalCard from '../utils/NewArrivalCard';
+import useIsVisible from '../hooks/useIsVisible';
+import Icons from '../utils/icons';
+import { mainCardProduct } from '../types/product.types';
 
 interface sectionReutilisableProps {
     sectionTitle: string;
     hrefShopNow: string;
     arr: mainCardProduct[];
-    hrefTitle: string,
+    hrefTitle: string;
 }
 
 const SectionReutilisable: React.FC<sectionReutilisableProps> = ({
-                                                                     arr,
-                                                                     sectionTitle,
-                                                                     hrefShopNow,
-                                                                     hrefTitle = 'Shop now'
-                                                                 }) => {
+    arr,
+    sectionTitle,
+    hrefShopNow,
+    hrefTitle = 'Shop now',
+}) => {
     const [targetRef, isVisible] = useIsVisible(0.2);
 
     const sliderButtons = (
@@ -38,7 +38,7 @@ const SectionReutilisable: React.FC<sectionReutilisableProps> = ({
                 {hrefTitle}
             </a>
 
-            {sectionTitle === "New arrival" && sliderButtons}
+            {sectionTitle === 'New arrival' && sliderButtons}
 
             <div
                 ref={targetRef}

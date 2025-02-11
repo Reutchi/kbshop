@@ -1,6 +1,6 @@
 const config = {
     plugins: {
-        "@tailwindcss/postcss": {},  // Aceasta este configurația existentă
+        '@tailwindcss/postcss': {}, // Aceasta este configurația existentă
     },
 };
 
