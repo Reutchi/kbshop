@@ -15,6 +15,7 @@ const SectionReutilisable: React.FC<sectionReutilisableProps> = ({
                                                                      arr,
                                                                      sectionTitle,
                                                                      hrefShopNow,
+                                                                     hrefTitle = 'Shop now'
                                                                  }) => {
     const [targetRef, isVisible] = useIsVisible(0.2);
 
@@ -33,7 +34,7 @@ const SectionReutilisable: React.FC<sectionReutilisableProps> = ({
         <div className="z-10 relative flex justify-center flex-col items-center mt-8 md:mt-16 mx-5 md:mx-18">
             <h2 className="text-[42px]">{sectionTitle}</h2>
             <a className="text-sm underline text-gray-600" href={hrefShopNow}>
-                Shop now
+                {hrefTitle}
             </a>
 
             {sectionTitle === "New arrival" && sliderButtons}

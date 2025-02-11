@@ -6,6 +6,7 @@ import AccessoriesSection from "../components/AccessoriesSection";
 import SectionReutilisable from "../utils/SectionReutilisable";
 import PBtfansSection from "../components/PBtfansSection";
 import KeyboardSwitchesSection from "./KeyboardSwitchesSection";
+import ReadyToUseSection from "./ReadyToUseSection";
 export {
     Navigation,
     SocialEnjoy,
@@ -15,4 +16,5 @@ export {
     SectionReutilisable,
     PBtfansSection,
     KeyboardSwitchesSection,
+    ReadyToUseSection,
 }

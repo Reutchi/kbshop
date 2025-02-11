@@ -4,7 +4,7 @@ import {
     Navigation,
     NewArrivalSection,
     PBtfansSection,
-    ProductSection
+    ProductSection, ReadyToUseSection
 } from "../components";
 import React from "react";
 
@@ -19,6 +19,7 @@ const Home: React.FC = () => {
                 <AccessoriesSection />
                 <PBtfansSection />
                 <KeyboardSwitchesSection/>
+                <ReadyToUseSection/>
             </main>
         </>
     );
