@@ -19,3 +19,8 @@ export interface DropdownContent{
     link:string,
 }
 
+export interface FooterLink{
+    id: number,
+    link: string,
+    title: string,
+}
