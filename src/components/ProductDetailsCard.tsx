@@ -97,7 +97,7 @@ const ProductDetailsCard: React.FC = () => {
     return (
         <article className="flex justify-center flex-wrap gap-10 ">
             <div className="w-[500px]">
-                <figure className="mx-auto w-11/12	md:w-full mt-10">
+                <figure className="mx-auto w-[70%] md:w-full mt-10">
                     <img
                         className=" w-full cursor-pointer rounded-xl object-cover h-[300px]  transition-transform duration-300 md:hover:scale-105"
                         src={selectedImage}
@@ -105,7 +105,7 @@ const ProductDetailsCard: React.FC = () => {
                     />
                 </figure>
 
-                <ul className="flex w-11/12 md:w-full justify-center mx-auto flex-wrap gap-2 mt-5">
+                <ul className="flex w-[75%] md:w-full justify-center mx-auto flex-wrap gap-2 mt-5">
                     {productDetails.images.map((img, index) => (
                         <li key={index}>
                             <figure>
@@ -243,15 +243,17 @@ const ProductDetailsCard: React.FC = () => {
                             ))}
                         </div>
                     </fieldset>
-                    <hr className="mt-2 mx-10 border-dotted" />
+                    <hr className="mt-2 mx-18 md:mx-2 border-dotted" />
 
                     <fieldset className="mx-12 md:mx-0 mt-4">
-                        <legend className="text-xs pb-2 font-medium">Quantity</legend>
+                        <legend className="text-xs text-center md:text-left pb-2 font-medium">
+                            Quantity
+                        </legend>
                         <div className="flex  items-center gap-2">
                             <select
                                 value={quantity}
                                 onChange={(e) => setQuantity(Number(e.target.value))}
-                                className="w-full text-xs border border-[#b8b8b8] py-2 px-4 rounded-md"
+                                className="md:w-full w-1/2 mx-auto text-xs border border-[#b8b8b8] py-2 px-4 rounded-md"
                             >
                                 {[1, 2, 3, 4, 5, 6].map((num) => (
                                     <option key={num} value={num}>
