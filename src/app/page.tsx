@@ -1,4 +1,11 @@
-import { AccessoriesSection, Navigation, NewArrivalSection, PBtfansSection, ProductSection } from "../components";
+import {
+    AccessoriesSection,
+    KeyboardSwitchesSection,
+    Navigation,
+    NewArrivalSection,
+    PBtfansSection,
+    ProductSection
+} from "../components";
 import React from "react";
 
 
@@ -11,6 +18,7 @@ const Home: React.FC = () => {
                 <NewArrivalSection />
                 <AccessoriesSection />
                 <PBtfansSection />
+                <KeyboardSwitchesSection/>
             </main>
         </>
     );
