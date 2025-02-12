@@ -9,13 +9,12 @@ interface ProductCardProps {
 }
 const ProductCard: React.FC<ProductCardProps> = ({ title, img, alt, link }) => {
     return (
-        <article className="relative cursor-pointer flex justify-center items-end  rounded-xl group overflow-hidden">
+        <article className="cursor-pointer flex justify-center items-end  rounded-xl group overflow-hidden">
             <figure className="transition-transform duration-300  group-hover:scale-105">
-                <Image
+                <img
                     width="700"
                     height="0"
-                    priority
-                    className="h-[340px] rounded-md object-cover md:h-[350px] w-[700px]"
+                    className="h-[200px] rounded-md object-cover md:h-[350px] w-[200px]"
                     alt={alt}
                     src={img}
                 />

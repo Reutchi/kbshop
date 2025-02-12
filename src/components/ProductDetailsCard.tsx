@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Icons from '../utils/icons';
+import { useCarousel } from '../hooks/useCarousel';
+import CarouselIndicators from './CarouselIndicators';
 
 const productDetails = {
     name: '[GB] Snake60 R2',
@@ -59,6 +61,9 @@ const ProductDetailsCard: React.FC = () => {
     const [selectedLayout, setSelectedLayout] = useState<string | null>(null);
     const [selectedPCB, setSelectedPCB] = useState<string | null>(null);
 
+    const { activeCarouselId, setActiveCarouselId, onTouchStart, onTouchMove, onTouchEnd } =
+        useCarousel(productDetails.images.length);
+
     const toggleAccessory = (id: string) => {
         setSelectedAccessories((prev) =>
             prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
@@ -95,17 +100,44 @@ const ProductDetailsCard: React.FC = () => {
     };
 
     return (
-        <article className="flex justify-center flex-wrap gap-10 ">
-            <div className="w-[500px]">
-                <figure className="mx-auto w-[70%] md:w-full mt-10">
+        <article className="w-11/12 mt-4 flex justify-center md:flex-nowrap flex-wrap gap-14 ">
+            {/*Mobile*/}
+            <div className="md:hidden">
+                <div className="overflow-hidden relative">
+                    <div
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
+                        className="flex transition-transform duration-500"
+                        style={{ transform: `translateX(-${activeCarouselId * 100}%)` }}
+                    >
+                        {productDetails.images.map((img, index) => (
+                            <div key={index} className="min-w-full">
+                                <img
+                                    src={img}
+                                    alt={`Product Image ${index + 1}`}
+                                    className="w-full h-[350px] object-cover rounded-xl object-cover"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <CarouselIndicators
+                    itemsLength={productDetails.images.length}
+                    activeIndex={activeCarouselId}
+                    onSelect={setActiveCarouselId}
+                />
+            </div>
+
+            <div className="w-1/2">
+                <figure className="hidden md:flex justify-center w-[50%] h-[50%] md:w-full mt-10">
                     <img
-                        className=" w-full cursor-pointer rounded-xl object-cover h-[300px]  transition-transform duration-300 md:hover:scale-105"
+                        className="cursor-pointer rounded-xl object-cover transition-transform duration-300 md:hover:scale-105"
                         src={selectedImage}
                         alt="Selected product"
                     />
                 </figure>
-
-                <ul className="flex w-[75%] md:w-full justify-center mx-auto flex-wrap gap-2 mt-5">
+                <ul className="hidden md:flex md:w-[80%] justify-center mx-auto flex-wrap gap-2 mt-5">
                     {productDetails.images.map((img, index) => (
                         <li key={index}>
                             <figure>
@@ -125,7 +157,7 @@ const ProductDetailsCard: React.FC = () => {
                 </ul>
             </div>
 
-            <div className="w-[500px] mt-10">
+            <div className="md:w-1/2 w-[500px] md:mt-10">
                 <h3 className="md:text-left text-center mb-4 text-2xl font-semibold">
                     {productDetails.name}
                 </h3>
@@ -208,7 +240,7 @@ const ProductDetailsCard: React.FC = () => {
                         ))}
                     </fieldset>
 
-                    <fieldset className="mx-12 text-center flex justify-center md:justify-start md:text-left md:mx-0 mt-4">
+                    <fieldset className="mx-12 text-center flex md:flex-nowrap flex-wrap justify-center md:justify-start md:text-left md:mx-0 mt-4">
                         {selectedAccessories.length > 0 && (
                             <div className="my-2 p-3 border rounded-md bg-gray-100">
                                 <h4 className="text-sm font-medium">Selected Accessories:</h4>
