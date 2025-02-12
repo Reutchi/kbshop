@@ -35,7 +35,7 @@ const ProductSection: React.FC = () => {
         useCarousel(productCardItems.length);
 
     return (
-        <section className="mt-10 mx-4 md:mx-16">
+        <section className="mt-10 mx-12 md:mx-16">
             <div className="hidden md:grid md:grid-cols-2 gap-4">
                 {productCardItems.map(({ id, title, img, alt, link }) => (
                     <ProductCard key={id} title={title} img={img} alt={alt} link={link} />

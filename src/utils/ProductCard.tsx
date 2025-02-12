@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, img, alt, link }) => {
                 <img
                     width="700"
                     height="0"
-                    className="h-[200px] rounded-md object-cover md:h-[350px] w-[200px]"
+                    className="h-[400px] w-[500px] rounded-md object-cover md:h-[350px]"
                     alt={alt}
                     src={img}
                 />
