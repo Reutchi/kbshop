@@ -42,7 +42,6 @@ const ProductSection: React.FC = () => {
                 ))}
             </div>
 
-            {/* CAROUSEL FOR MOBILE */}
             <div className="md:hidden">
                 <div className="overflow-hidden relative">
                     <div
