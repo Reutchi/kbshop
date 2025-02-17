@@ -18,7 +18,6 @@ const productDetails = {
         '/productdetail/a8.webp',
         '/productdetail/a9.webp',
         '/productdetail/a10.webp',
-        '/productdetail/a11.webp',
     ],
     colors: [
         { id: 'champagne', label: 'Champagne (Sand)' },
@@ -100,8 +99,7 @@ const ProductDetailsCard: React.FC = () => {
     };
 
     return (
-        <article className="w-11/12 mt-4 flex justify-center md:flex-nowrap flex-wrap gap-14 ">
-            {/*Mobile*/}
+        <article className="w-11/12 mt-4 flex justify-center md:flex-nowrap flex-wrap md:gap-14 gap-6 ">
             <div className="md:hidden">
                 <div className="overflow-hidden relative">
                     <div
@@ -137,7 +135,7 @@ const ProductDetailsCard: React.FC = () => {
                         alt="Selected product"
                     />
                 </figure>
-                <ul className="hidden md:flex md:w-[80%] justify-center mx-auto flex-wrap gap-2 mt-5">
+                <ul className="hidden md:flex md:w-full justify-center flex-wrap items-center gap-1 mt-5">
                     {productDetails.images.map((img, index) => (
                         <li key={index}>
                             <figure>
