@@ -73,8 +73,7 @@ Rounding Snake's fierce energy, and inspired by vintage supercar design, edge to
                     }}
                 />
                 <iframe
-                    className="mx-auto mt-4 w-[700px]"
-                    height="420"
+                    className="mx-auto mt-4 w-full md:w-[700px]"
                     src={productsItemDesc[0].video}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
