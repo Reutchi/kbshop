@@ -56,7 +56,7 @@ Rounding Snake's fierce energy, and inspired by vintage supercar design, edge to
 
     return (
         <section className="bg-black mt-16">
-            <article className="mx-auto w-[70%] text-white text-center">
+            <article className="mx-auto w-[90%] md:w-[70%] text-white text-center">
                 <figure className="flex justify-center mt-4 ">
                     <Image
                         src={productsItemDesc[0].mainImage}
@@ -73,7 +73,7 @@ Rounding Snake's fierce energy, and inspired by vintage supercar design, edge to
                     }}
                 />
                 <iframe
-                    className="mx-auto mt-4 w-full md:w-[700px]"
+                    className="mx-auto mt-4 w-full md:w-[700px] md:h-[400px]"
                     src={productsItemDesc[0].video}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
