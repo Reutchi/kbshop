@@ -9,6 +9,7 @@ import KeyboardSwitchesSection from './KeyboardSwitchesSection';
 import ReadyToUseSection from './ReadyToUseSection';
 import FooterSection from './FooterSection';
 import ProductDetailsCard from './ProductDetailsCard';
+import DescriptionProduct from './DescriptionProduct';
 export {
     Navigation,
     SocialEnjoy,
@@ -21,4 +22,5 @@ export {
     ReadyToUseSection,
     FooterSection,
     ProductDetailsCard,
+    DescriptionProduct,
 };
