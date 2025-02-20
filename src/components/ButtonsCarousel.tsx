@@ -13,9 +13,8 @@ const ButtonsCarousel: React.FC<ButtonsCarouselProps> = ({
     children,
 }) => {
     function handleCarousel(direction: string) {
-        carouselParams(direction);
+        carouselParams(direction as 'left' | 'right');
     }
-
     return (
         <div className="w-full flex md:hidden justify-center gap-4 items-center">
             <button
