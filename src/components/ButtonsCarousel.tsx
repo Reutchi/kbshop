@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonsCarouselProps {
-    carouselParams: (direction: string) => void;
+    carouselParams: (direction: 'left' | 'right') => void;
     activeCarouselId: number;
     children: React.ReactNode;
     imgArrLength: number;

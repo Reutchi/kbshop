@@ -5,7 +5,7 @@ interface Props {
     itemsLength: number;
     activeIndex: number;
     onSelect: (index: number) => void;
-    carouselParams: (a: string) => void;
+    carouselParams: (direction: 'left' | 'right') => void;
 }
 
 const CarouselIndicators: React.FC<Props> = ({
@@ -15,7 +15,7 @@ const CarouselIndicators: React.FC<Props> = ({
     carouselParams,
 }) => {
     function handleCarousel(direction: string) {
-        carouselParams(direction);
+        carouselParams(direction as 'left' | 'right');
     }
 
     return (
