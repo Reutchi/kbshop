@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Icons from '../utils/icons';
 import { useCarousel } from '../hooks/useCarousel';
 import CarouselIndicators from './CarouselIndicators';
+import ButtonsCarousel from './ButtonsCarousel';
 
 const productDetails = {
     name: '[GB] Snake60 R2',
@@ -98,6 +99,16 @@ const ProductDetailsCard: React.FC = () => {
         console.log(cartDetails);
     };
 
+    const handleCarousel = (direction: 'left' | 'right') => {
+        if (direction === 'right') {
+            setActiveCarouselId((prev) => (prev + 1) % productDetails.images.length);
+        } else if (direction === 'left') {
+            setActiveCarouselId(
+                (prev) => (prev - 1 + productDetails.images.length) % productDetails.images.length,
+            );
+        }
+    };
+
     return (
         <article className="w-11/12 mt-4 flex justify-center md:flex-nowrap flex-wrap md:gap-14 gap-6 ">
             <div className="md:hidden">
@@ -120,7 +131,9 @@ const ProductDetailsCard: React.FC = () => {
                         ))}
                     </div>
                 </div>
+
                 <CarouselIndicators
+                    carouselParams={handleCarousel}
                     itemsLength={productDetails.images.length}
                     activeIndex={activeCarouselId}
                     onSelect={setActiveCarouselId}
