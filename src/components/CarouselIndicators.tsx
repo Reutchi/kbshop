@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonsCarousel from './ButtonsCarousel';
 
 interface Props {
     itemsLength: number;
