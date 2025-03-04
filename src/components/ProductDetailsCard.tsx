@@ -97,7 +97,6 @@ const ProductDetailsCard: React.FC = () => {
 
         console.log(cartDetails);
     };
-
     return (
         <article className="w-11/12 mt-4 flex justify-center md:flex-nowrap flex-wrap md:gap-14 gap-6 ">
             <div className="md:hidden">
@@ -120,11 +119,6 @@ const ProductDetailsCard: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <CarouselIndicators
-                    itemsLength={productDetails.images.length}
-                    activeIndex={activeCarouselId}
-                    onSelect={setActiveCarouselId}
-                />
             </div>
 
             <div className="w-1/2">
